@@ -33,6 +33,7 @@ const TIMELINE = [
 ];
 export default function Resume() {
   const [status, setStatus] = useState("idle"); // idle | loading | done
+  const cvUrl = `${import.meta.env.BASE_URL}cv/Faham_Hussain_CV.pdf`;
 
   const handleDownload = () => {
     if (status !== "idle") return;
@@ -41,7 +42,7 @@ export default function Resume() {
 
     // Trigger an actual download of the CV file (works in dev & prod)
     try {
-      const fileUrl = "/cv/Faham_Hussain_CV.pdf";
+      const fileUrl = cvUrl;
       const a = document.createElement("a");
       a.href = fileUrl;
       a.download = "Faham_Hussain_CV.pdf";
@@ -151,7 +152,7 @@ export default function Resume() {
 
           {/* View CV button (opens PDF in new tab) */}
           <a
-            href="/cv/Faham_Hussain_CV.pdf"
+            href={cvUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="theme-border theme-heading inline-flex items-center gap-2 rounded-xl border px-5 py-3 text-sm font-medium transition-all duration-300 hover:border-cyan-400/60 hover:bg-cyan-400/8 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)] active:scale-[0.97]"

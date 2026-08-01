@@ -128,20 +128,22 @@ export default function Projects() {
                   </span>
                   {/* Icon links — visible by default */}
                   <div className="flex gap-2 opacity-100 transition-all duration-300">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-md border border-line p-1.5 text-muted transition-all duration-300 hover:border-emerald-glow/50 hover:text-emerald-glow hover:scale-110 hover:shadow-[0_0_12px_rgba(16,185,129,0.25)]"
-                      aria-label={`${project.title} GitHub repository`}
-                    >
-                      <Github size={14} />
-                    </a>
+                      {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-md border border-line p-1.5 text-muted transition-all duration-300 hover:border-emerald-glow/50 hover:text-emerald-glow hover:scale-110 hover:shadow-[0_0_12px_rgba(16,185,129,0.25)]"
+                        aria-label={`${project.title} GitHub repository`}
+                      >
+                        <Github size={14} />
+                      </a>
+                    )}
                     {project.demo && (
                       <a
                         href={project.demo}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="rounded-md border border-line p-1.5 text-muted transition-all duration-300 hover:border-emerald-glow/50 hover:text-emerald-glow hover:scale-110 hover:shadow-[0_0_12px_rgba(16,185,129,0.25)]"
                         aria-label={`${project.title} live demo`}
                       >

@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      const basePath = "/My-Portfolio/";
+      const redirectPath = location.pathname + location.search + location.hash;
+      window.location.replace(
+        `${basePath}?redirect=${encodeURIComponent(redirectPath)}`,
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

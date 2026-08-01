@@ -4,10 +4,13 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script>
-      const redirectPath = location.pathname + location.search + location.hash;
-      window.location.replace(
-        `/My-Portfolio/?redirect=${encodeURIComponent(redirectPath)}`,
-      );
+      const basePath = "/My-Portfolio";
+      const sourcePath =
+        location.pathname.replace(new RegExp(`^${basePath}`), "") || "/";
+      const query = location.search || "";
+      const fragment = location.hash || "";
+      const path = `${sourcePath}${query}${fragment}`;
+      window.location.replace(`${basePath}/#${path}`);
     </script>
   </head>
   <body></body>

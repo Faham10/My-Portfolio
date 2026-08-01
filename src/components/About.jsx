@@ -12,7 +12,7 @@ const STATS = [
   { icon: MapPin, label: "Location", value: "Karachi, Pakistan" },
 ];
 
-const PROFILE_IMAGE = "/images/profile.jpg";
+const PROFILE_IMAGE = `${import.meta.env.BASE_URL}images/profile.jpg`;
 
 function TiltCard() {
   return (

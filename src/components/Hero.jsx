@@ -67,6 +67,8 @@ function Typing({
 }
 
 export default function Hero() {
+  const profileImageUrl = `${import.meta.env.BASE_URL}images/profile.jpg`;
+
   // section reveal variant for the hero heading and content
   const container = useMemo(() => ({
     hidden: { opacity: 0 },
@@ -163,7 +165,7 @@ export default function Hero() {
             <a
               href="https://github.com/Faham10"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="btn-icon rounded-lg p-2.5 transition-colors hover:bg-slate-800"
               aria-label="GitHub"
             >
@@ -172,7 +174,7 @@ export default function Hero() {
             <a
               href="https://www.linkedin.com/in/syed-faham-hussain-38a3702ab/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="btn-icon rounded-lg p-2.5 transition-colors hover:bg-slate-800"
               aria-label="LinkedIn"
             >
@@ -189,7 +191,7 @@ export default function Hero() {
             {/* Added style containment to suppress CSS masking syntax warnings if global classes conflict */}
             <div className="profile-mask overflow-hidden rounded-full relative">
               <img
-                src="/images/profile.jpg"
+                src={profileImageUrl}
                 alt="Syed Faham Hussain"
                 width={560}
                 height={560}
