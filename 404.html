@@ -4,9 +4,12 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script>
+      const pathSegments = location.pathname.split("/").filter(Boolean);
+      const repoName = pathSegments[0] || "";
       const redirectPath = location.pathname + location.search + location.hash;
+      const basePath = repoName ? `/${repoName}/` : "/";
       window.location.replace(
-        `/My-Portfolio/?redirect=${encodeURIComponent(redirectPath)}`,
+        `${basePath}?redirect=${encodeURIComponent(redirectPath)}`,
       );
     </script>
   </head>
