@@ -189,7 +189,7 @@ export default function Hero() {
             {/* Added style containment to suppress CSS masking syntax warnings if global classes conflict */}
             <div className="profile-mask overflow-hidden rounded-full relative">
               <img
-                src="/images/profile.jpg"
+                src={`${import.meta.env.BASE_URL}images/profile.jpg`}
                 alt="Syed Faham Hussain"
                 width={560}
                 height={560}
