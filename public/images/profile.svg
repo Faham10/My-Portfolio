@@ -1,0 +1,20 @@
+<svg width="900" height="1125" viewBox="0 0 900 1125" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="1125" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1727" />
+      <stop offset="0.5" stop-color="#111C33" />
+      <stop offset="1" stop-color="#0A1221" />
+    </linearGradient>
+    <linearGradient id="accent" x1="180" y1="120" x2="760" y2="925" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981" />
+      <stop offset="1" stop-color="#6366F1" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1125" rx="48" fill="url(#bg)" />
+  <rect x="56" y="56" width="788" height="1013" rx="34" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" />
+  <circle cx="450" cy="355" r="182" fill="url(#accent)" fill-opacity="0.24" />
+  <circle cx="450" cy="355" r="120" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" />
+  <text x="450" y="410" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="150" font-weight="700" fill="#F4F8FF">SF</text>
+  <text x="450" y="560" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" letter-spacing="6" fill="#A6B0C3">PORTFOLIO</text>
+  <path d="M225 825C284 747 355 705 450 705C545 705 616 747 675 825" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+</svg>
